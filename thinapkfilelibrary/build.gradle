@@ -1,0 +1,30 @@
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'kotlin'
+apply plugin: 'com.novoda.bintray-release'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9'
+    }
+}
+
+dependencies {
+    compileOnly gradleApi()
+    implementation "com.android.tools.build:gradle:3.4.2"
+}
+
+publish {
+    userOrg = 'skyinu'
+    groupId = 'com.skyinu'
+    artifactId = 'thinApkFilePlugin'
+    publishVersion = '0.0.1-SNAPSHOT'
+    desc = 'a gradle plugin to remove useless file in apk to reduce apk size'
+    website = "https://github.com/skyinu/thinApkFile"
+}
