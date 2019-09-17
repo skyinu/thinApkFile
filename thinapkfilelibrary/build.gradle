@@ -11,7 +11,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.novoda:bintray-release:0.9'
+        classpath 'com.novoda:bintray-release:0.9.1'
     }
 }
 
@@ -24,7 +24,7 @@ publish {
     userOrg = 'skyinu'
     groupId = 'com.skyinu'
     artifactId = 'thinApkFilePlugin'
-    publishVersion = '0.0.1-SNAPSHOT'
+    publishVersion = '0.0.9'
     desc = 'a gradle plugin to remove useless file in apk to reduce apk size'
     website = "https://github.com/skyinu/thinApkFile"
 }
