@@ -41,7 +41,7 @@ class ThinApkFilePlugin : Plugin<Project> {
         variants.all { variant ->
             val packageTask = project.tasks.findByName("$PACKAGE_APK_TASK_PREFIX${variant.name.capitalize()}")
             packageTask?.doFirst {
-                ThinkApkFileTask.thinJavaResources(it as PackageApplication, thinApkExtension)
+                ThinkApkFileTask.thinJavaResources(it as PackageApplication, project)
             }
             if (packageTask == null) {
                 println("can't find package task")

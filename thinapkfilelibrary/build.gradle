@@ -24,7 +24,7 @@ publish {
     userOrg = 'skyinu'
     groupId = 'com.skyinu'
     artifactId = 'thinApkFilePlugin'
-    publishVersion = '0.0.9'
+    publishVersion = '0.1.1'
     desc = 'a gradle plugin to remove useless file in apk to reduce apk size'
     website = "https://github.com/skyinu/thinApkFile"
 }

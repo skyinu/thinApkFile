@@ -16,7 +16,7 @@ then if you apply this plugin to your project,your apk will like this
 add classpath to your project
 
 ```
-classpath 'com.skyinu:thinApkFilePlugin:0.0.9'
+classpath 'com.skyinu:thinApkFilePlugin:0.1.1'
 ```
 
 then apply the plugin will be ok, no other configuration now
