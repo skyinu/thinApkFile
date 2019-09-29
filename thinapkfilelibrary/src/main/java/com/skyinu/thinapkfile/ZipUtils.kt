@@ -9,7 +9,10 @@ import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
 
 object ZipUtils {
-    fun copyFileWithKeepRules(originFile: File, targetFile: File, keepRules: List<Pattern>) {
+    fun copyFileWithKeepRules(
+        originFile: File, targetFile: File, keepRules: List<Pattern>,
+        printLog: Boolean, logFile: Lazy<File>
+    ) {
         val buffer = ByteArray(8096)
         val originFileIns = ZipInputStream(FileInputStream(originFile))
         val targetFileOutS = ZipOutputStream(FileOutputStream(targetFile))
@@ -25,7 +28,9 @@ object ZipUtils {
                         len = originFileIns.read(buffer)
                     }
                 } else {
-                    println("remove item -> $entryName")
+                    if (printLog) {
+                        logFile.value.appendText("remove item -> $entryName in ${originFile.name}\n")
+                    }
                 }
                 entry = originFileIns.nextEntry
             }

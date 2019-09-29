@@ -16,7 +16,7 @@ then if you apply this plugin to your project,your apk will like this
 add classpath to your project
 
 ```
-classpath 'com.skyinu:thinApkFilePlugin:0.1.1'
+classpath 'com.skyinu:thinApkFilePlugin:0.1.4'
 ```
 
 then apply the plugin will be ok, no other configuration now
@@ -24,3 +24,7 @@ then apply the plugin will be ok, no other configuration now
 ```
 apply plugin: 'thinApkFile'
 ```
+
+## Change
+
++ bug fix - okhttp depends on the file publicsuffixes.gz, see more detail at https://publicsuffix.org
