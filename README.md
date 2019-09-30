@@ -19,12 +19,22 @@ add classpath to your project
 classpath 'com.skyinu:thinApkFilePlugin:0.1.4'
 ```
 
-then apply the plugin will be ok, no other configuration now
+then apply the plugin will be ok
 
 ```
 apply plugin: 'thinApkFile'
 ```
 
+## Confirguration
+
+```
+thinApk{
+    thinSwitch true //plugin switch
+    printDetail true // log switch, true represenet to print more log to file
+    keepRules [".*publicsuffixes.gz$"] // keep rules to indicate files which you don't want to remove
+}
+```
+
 ## Change
 
-+ bug fix - okhttp depends on the file publicsuffixes.gz, see more detail at https://publicsuffix.org
++ bug fix, keep file  `publicsuffixes.gz`- okhttp depends on the file publicsuffixes.gz, see more detail at https://publicsuffix.org
